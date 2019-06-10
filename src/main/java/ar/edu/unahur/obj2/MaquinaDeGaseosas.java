@@ -4,19 +4,38 @@ public class MaquinaDeGaseosas {
 
     private  Estado miEstado;
     private double dineroIngresado;
-    private int stok;
-    private boolean presionaPalanca=true;
+    private int stock;
+    private int precioGaseosa=30;
 
 
 
-    public MaquinaDeGaseosas(Estado miEstado, double dineroIngresado, int stok,boolean presionaPalanca) {
+
+    public MaquinaDeGaseosas(Estado miEstado, double dineroIngresado, int stock,int precioGaseosa) {
         this.miEstado = miEstado;
         this.dineroIngresado = dineroIngresado;
-        this.stok = stok;
-        this.presionaPalanca=presionaPalanca;
+        this.stock = stock;
+        this.precioGaseosa=precioGaseosa;
     }
 
 
+    public void setEstado(Estado e){
+        this.miEstado = e;
+    }
 
+    public void servirGaseosa(){
+        miEstado.servirGaseosa(precioGaseosa,dineroIngresado);
 
+    }
+
+    public void sinStock(){
+        miEstado.sinStock(dineroIngresado,stock);
+    }
+
+    public int getPrecioprecioGaseosa() {
+        return precioGaseosa;
+    }
+
+    public double getDineroIngresado() {
+        return dineroIngresado;
+    }
 }

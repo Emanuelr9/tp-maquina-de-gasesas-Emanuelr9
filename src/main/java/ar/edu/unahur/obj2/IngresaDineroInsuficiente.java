@@ -1,18 +1,20 @@
 package ar.edu.unahur.obj2;
 
-public abstract class IngresaDineroInsuficiente implements Estado {
+public  class IngresaDineroInsuficiente implements Estado {
 
     @Override
-    public void servierGaseosa(int precio, double dineroIngresado){
+    public void servirGaseosa(int precioGaseosa, double dineroIngresado){
 
-        int total;
-        total = (int) (dineroIngresado - precio);
+        int faltante;
+        faltante = (int) (precioGaseosa - dineroIngresado);
 
-        System.out.print("El dinero es insuficiente, restan poner:" + total );
-
-
+        System.out.print("El dinero es insuficiente, restan poner:" + faltante );
 
 
+    }
+
+    @Override
+    public void sinStock(double dineroIngresado,int stock) {
 
     }
 }

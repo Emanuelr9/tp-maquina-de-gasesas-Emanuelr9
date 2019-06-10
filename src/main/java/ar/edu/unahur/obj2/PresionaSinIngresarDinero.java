@@ -4,12 +4,19 @@ public class PresionaSinIngresarDinero implements Estado {
 
 
     @Override
-    public void servierGaseosa(int precio, double dineroIngresado) {
+    public void servirGaseosa(int precioGaseosa, double dineroIngresado) {
 
         if (dineroIngresado == 0) {
-            System.out.print("Usted no ingreso el dinero, el valor de la gaseos es: " + precio);
+            System.out.print("Ingrese el dinero, el valor de la gaseosa es: " + precioGaseosa);
         }
 
     }
+
+    @Override
+    public void sinStock(double dineroIngresado,int stock) {
+
+    }
+
+
 }
 
