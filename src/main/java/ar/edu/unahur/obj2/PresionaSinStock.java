@@ -5,14 +5,10 @@ public  class PresionaSinStock implements Estado {
 
 
     @Override
-    public void servirGaseosa(int precioGaseosa, double dineroIngresado,boolean precionaPalanca) {
+    public void ejecutarAccion(int precioGaseosa, double dineroIngresado,int stock, boolean precionaPalanca) {
 
+        if (precionaPalanca==true)
+            System.out.print("Esta maquina se encuentra sin stock disponible" );
     }
 
-    @Override
-    public void sinStock(double dineroIngresado,int stock,boolean precionaPalanca) {
-
-        System.out.print("Esta maquina se encuentra sin stock disponible: " +stock);
-
-    }
 }

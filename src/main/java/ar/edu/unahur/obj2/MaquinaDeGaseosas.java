@@ -2,38 +2,37 @@ package ar.edu.unahur.obj2;
 
 public class MaquinaDeGaseosas {
 
-    private  Estado miEstado;
+
     private double dineroIngresado;
     private int stock;
-    private int precioGaseosa=30;
+    private int precioGaseosa;
     private boolean precionaPalanca;
+    private  Estado estado;
 
 
 
     public MaquinaDeGaseosas(double dineroIngresado, int stock, int precioGaseosa,boolean precionaPalanca) {
-        this.miEstado = miEstado;
+
         this.dineroIngresado = dineroIngresado;
         this.stock = stock;
         this.precioGaseosa=precioGaseosa;
         this.precionaPalanca = precionaPalanca;
+
 
     }
 
 
 
     public void setEstado(Estado e){
-        this.miEstado = e;
+        this.estado = e;
     }
 
 
-    public void servirGaseosa(){
-        miEstado.servirGaseosa(precioGaseosa,dineroIngresado,precionaPalanca);
+    public void ejecutarAccion(){
+        estado.ejecutarAccion(precioGaseosa,dineroIngresado,stock,precionaPalanca);
 
     }
 
-    public void sinStock(){
-        miEstado.sinStock(dineroIngresado,stock,precionaPalanca);
-    }
 
     public int getPrecioprecioGaseosa() {
         return precioGaseosa;
